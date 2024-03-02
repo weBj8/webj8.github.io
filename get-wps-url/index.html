@@ -21,5 +21,6 @@ const searchParams = new URLSearchParams(window.location.search);
 const pv = searchParams.get('pv');
 const arch = searchParams.get('arch');
 console.log(getSourceUrl(pv,arch))
-window.location.href = getSourceUrl(pv,arch);
+window.location.replace(getSourceUrl(pv,arch), 302);
+// window.location.href = getSourceUrl(pv,arch);
 </script>
